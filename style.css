@@ -1,0 +1,315 @@
+
+    *, *before, *after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-color: #ffffff;
+      color: #6b7280; /* neutral gray */
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #3730a3;
+      outline: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(100,100,100,0.1);
+      z-index: 1000;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #4f46e5;
+      user-select: none;
+      letter-spacing: -0.02em;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 0;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #4f46e5;
+      transition: width 0.25s ease;
+      border-radius: 2px;
+    }
+    nav a:hover::after, nav a:focus::after {
+      width: 100%;
+    }
+
+    .hero {
+      padding: 96px 24px 120px;
+      text-align: center;
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      user-select: none;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 1.1;
+      color: #1e293b;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-weight: 400;
+      font-size: 1.25rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 48px;
+      color: #475569;
+    }
+
+    .btn-primary {
+      background-color: #4f46e5;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1.125rem;
+      padding: 16px 48px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #4338ca;
+      box-shadow: 0 10px 20px rgba(67, 56, 202, 0.45);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .btn-primary .material-icons {
+      font-size: 20px;
+      vertical-align: middle;
+    }
+    .about-university {
+      padding: 72px 24px;
+      background-color: #ffffff;
+      user-select: text;
+    }
+
+    .about-university .container {
+      max-width: 960px;
+      text-align: center;
+    }
+
+    .about-university h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 16px;
+    }
+
+    .about-university p {
+      font-size: 1.125rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .features {
+      background: #f9fafb;
+      padding: 80px 24px 120px;
+      user-select: text;
+    }
+
+    .features .container {
+      max-width: 1100px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 48px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 32px 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .feature-card:hover,
+    .feature-card:focus-within {
+      box-shadow: 0 8px 24px rgba(79,70,229,0.25);
+      outline: none;
+    }
+
+    .feature-icon {
+      font-size: 48px;
+      color: #4f46e5;
+      margin-bottom: 24px;
+      user-select: none;
+    }
+
+    .feature-title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #1e293b;
+    }
+
+    .feature-description {
+      font-size: 1rem;
+      color: #64748b;
+      line-height: 1.5;
+      user-select: text;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1e293b; /* dark slate */
+      color: #cbd5e1; /* light slate */
+      padding: 48px 24px;
+      user-select: none;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      min-width: 180px;
+    }
+
+    .footer-logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #a5b4fc; /* lighter indigo */
+      margin-bottom: 12px;
+      user-select: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      user-select: text;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus {
+      color: #818cf8;
+      outline: none;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .social-icons a {
+      color: #cbd5e1;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover,
+    .social-icons a:focus {
+      color: #818cf8;
+      outline: none;
+    }
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .btn-primary {
+        padding: 14px 36px;
+        font-size: 1rem;
+      }
+      nav {
+        display: none; 
+      }
+      .footer-container {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+      }
+      .footer-section {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+    }
